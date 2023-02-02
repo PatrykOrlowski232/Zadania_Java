@@ -7,8 +7,10 @@ import devices.Diesel;
 public class Main {
     public static void main(String[] args) {
         Pet pet = new Pet("cat");
-        Human me = new Human();
-        Human sister = new Human();
+        Car[] Garage = new Car[5];
+        Car[] Garage2 = new Car[5];
+        Human me = new Human(Garage);
+        Human sister = new Human(Garage2);
         Car wagen = new Diesel("Camaro" , "Chevrolet" , 20000);
         Car wagen2 = new Diesel("Camaro" , "Chevrolet" , 20000);
 

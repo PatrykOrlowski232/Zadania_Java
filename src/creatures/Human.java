@@ -1,7 +1,6 @@
 package creatures;
 import devices.Phone;
 
-import creatures.Animal;
 import devices.Car;
 
 public class Human {
@@ -11,11 +10,25 @@ public class Human {
 
   private  Animal pet;
 
-    private Car car;
+    private Car[] garage;
+
+    int howMuchCars;
 
     private Phone phone;
 
     public double cash;
+
+    public Human(Car[] garage)
+    {
+        this.garage = garage;
+        howMuchCars = 0;
+    }
+
+    public Human(Car[] garage , int size)
+    {
+        this.garage = garage;
+        howMuchCars = 0;
+    }
 
    public double getSalary()
 
@@ -33,17 +46,20 @@ public class Human {
         }
     }
 
-    public Car getCar()
+    public Car getCar(int whoes)
     {
-        return car;
+        return garage[whoes];
     }
 
    public  void setCar(Car car){
-        if(salary > car.price)
-            this.car = car;
+        if(salary > car.price) {
+            this.garage[howMuchCars] = car;
+            howMuchCars++;
+        }
         else if(salary > car.price/12) {
             System.out.println("Kupiłeś auto na kredyt");
-            this.car = car;
+            this.garage[howMuchCars] = car;
+            howMuchCars++;
         }
         else
                 System.out.println("Nie stać Cie na to auto");
@@ -68,4 +84,9 @@ public class Human {
 
     }
 
+    double value(){
+        for(int i = 0 ; i < howMuchCars ; i++)
+            garage[0].value += garage[i].price;
+        return garage[0].value;
+    }
 }

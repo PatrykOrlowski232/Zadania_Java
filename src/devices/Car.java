@@ -20,7 +20,7 @@ public abstract class Car extends Devices implements  sellable {
     @Override
     public void sell(Human seller , Human buyer, double price)
     {
-        if(seller.getCar() == this && buyer.cash >= price) {
+        if(seller.getCar(0) == this && buyer.cash >= price) {
             System.out.println("Tranzakcja przebiegła pomyślnie");
             buyer.setCar(this);
             seller.setCar(null);

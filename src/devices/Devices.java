@@ -10,6 +10,8 @@ public abstract class Devices  {
     int ageOfProduction;
     public double price;
 
+    public double value;
+
     public void tostring(){
         System.out.println("Model :" + model + "\nProducent:" + producer +"\nCena: " + price);
     }
