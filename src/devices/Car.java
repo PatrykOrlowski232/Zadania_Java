@@ -1,20 +1,18 @@
 package devices;
 
-public class Car {
-    final String model;
+public class Car extends Devices {
 
-    public double price;
-    final String producer;
-    int ageOfProduction;
 
-    public Car(String model , String producer , double price){
+    public Car(String model, String producer, double price) {
         this.model = model;
         this.producer = producer;
         this.price = price;
     }
 
-    public void tostring(){
-        System.out.println("Model :" + model + "\nProducent:" + producer +"\nCena: " + price);
+    @Override
+    public void turnOn() {
+        System.out.println("Auto jest włączone");
+        this.oforon = true;
     }
 }
 

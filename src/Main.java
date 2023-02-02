@@ -17,5 +17,7 @@ public class Main {
        System.out.println(wagen.equals(wagen2));
        System.out.println(pet);
 
+       wagen.turnOn();
+
     }
 }

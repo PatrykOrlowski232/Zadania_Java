@@ -1,6 +1,14 @@
 package devices;
 
-public class Phone {
-    boolean oforon;
+public class Phone extends Devices {
+
+
+    @Override
+   public  void turnOn() {
+        this.oforon = true;
+    }
+
+
+
 
 }
