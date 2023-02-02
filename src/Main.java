@@ -1,10 +1,11 @@
 import creatures.Animal;
 import creatures.Human;
+import creatures.Pet;
 import devices.Car;
 
 public class Main {
     public static void main(String[] args) {
-        Animal pet = new Animal ("cat");
+        Pet pet = new Pet("cat");
         Human me = new Human();
         Human sister = new Human();
         Car wagen = new Car("Camaro" , "Chevrolet" , 20000);

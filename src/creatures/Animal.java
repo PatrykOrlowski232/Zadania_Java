@@ -2,7 +2,7 @@ package creatures;
 
 import devices.sellable;
 
-public class Animal implements sellable  {
+public abstract class Animal implements sellable , Feedable {
     private double weight;
     final String species;
     String name;
@@ -25,7 +25,8 @@ public class Animal implements sellable  {
         }
         }
 
-        void feed()
+       @Override
+       public void feed()
         {
             if(isLive == true)
             weight+=1;
@@ -33,6 +34,14 @@ public class Animal implements sellable  {
                 System.out.println("Pet is dead");
         }
 
+    @Override
+    public void feed(double weight)
+    {
+        if(isLive == true)
+            this.weight+= weight/2;
+        else
+            System.out.println("Pet is dead");
+    }
         public void takeAWalk() {
             if (isLive == true) {
                 weight -= 1;
