@@ -1,3 +1,7 @@
+package creatures;
+import devices.Phone;
+
+import creatures.Animal;
 import devices.Car;
 
 public class Human {
@@ -5,17 +9,21 @@ public class Human {
     int age;
     double salary;
 
-    Animal pet;
+  private  Animal pet;
 
     private Car car;
 
-    double getSalary()
+    private Phone phone;
+
+    public double cash;
+
+   public double getSalary()
 
     {
         return salary;
     }
 
-    void setSalary(double x)
+    public void setSalary(double x)
     {
         if(x < 0)
             System.out.println("Nie można przypisać ujemnej wartości");
@@ -25,12 +33,12 @@ public class Human {
         }
     }
 
-    Car getCar()
+    public Car getCar()
     {
         return car;
     }
 
-    void setCar(Car car){
+   public  void setCar(Car car){
         if(salary > car.price)
             this.car = car;
         else if(salary > car.price/12) {
@@ -39,6 +47,25 @@ public class Human {
         }
         else
                 System.out.println("Nie stać Cie na to auto");
+    }
+    public Phone getphone()
+    {
+        return phone;
+    }
+    public  void setPhone(Phone phone){
+
+            this.phone = phone;
+
+    }
+
+    public Animal getAnimal()
+    {
+        return pet;
+    }
+    public  void setAnimal(Animal animal){
+
+            this.pet= animal;
+
     }
 
 }

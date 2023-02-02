@@ -1,6 +1,8 @@
 package devices;
 
-public abstract class Devices {
+import creatures.Human;
+
+public abstract class Devices  {
 
     boolean oforon;
     String model;
@@ -13,4 +15,6 @@ public abstract class Devices {
     }
 
  public   abstract void turnOn();
+
+
 }

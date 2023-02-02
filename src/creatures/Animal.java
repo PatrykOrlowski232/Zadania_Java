@@ -1,4 +1,8 @@
-public class Animal {
+package creatures;
+
+import devices.sellable;
+
+public class Animal implements sellable  {
     private double weight;
     final String species;
     String name;
@@ -29,7 +33,7 @@ public class Animal {
                 System.out.println("Pet is dead");
         }
 
-        void takeAWalk() {
+        public void takeAWalk() {
             if (isLive == true) {
                 weight -= 1;
                 if (weight <= 0) {
@@ -40,6 +44,19 @@ public class Animal {
             else
                 System.out.println("Pet is dead");
         }
+
+    public void sell(Human seller , Human buyer, double price)
+    {
+        if(seller.getAnimal() == this && buyer.cash >= price) {
+            System.out.println("Tranzakcja przebiegła pomyślnie");
+            buyer.setAnimal(this);
+            seller.setAnimal(null);
+            seller.cash += price;
+            buyer.cash -= price;
+        }
+        else
+            System.out.println("Nie można przeprowadzić tranzakcji");
+    }
 
 
     }

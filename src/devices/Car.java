@@ -1,6 +1,8 @@
 package devices;
 
-public class Car extends Devices {
+import creatures.Human;
+
+public class Car extends Devices implements  sellable {
 
 
     public Car(String model, String producer, double price) {
@@ -14,5 +16,20 @@ public class Car extends Devices {
         System.out.println("Auto jest włączone");
         this.oforon = true;
     }
-}
+
+    @Override
+    public void sell(Human seller , Human buyer, double price)
+    {
+        if(seller.getCar() == this && buyer.cash >= price) {
+            System.out.println("Tranzakcja przebiegła pomyślnie");
+            buyer.setCar(this);
+            seller.setCar(null);
+            seller.cash += price;
+            buyer.cash -= price;
+        }
+        else
+            System.out.println("Nie można przeprowadzić tranzakcji");
+        }
+    }
+
 
