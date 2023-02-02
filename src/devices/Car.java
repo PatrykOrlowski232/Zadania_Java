@@ -1,7 +1,9 @@
+package devices;
+
 public class Car {
     final String model;
 
-    double price;
+    public double price;
     final String producer;
     int ageOfProduction;
 
@@ -9,6 +11,10 @@ public class Car {
         this.model = model;
         this.producer = producer;
         this.price = price;
+    }
+
+    public void tostring(){
+        System.out.println("Model :" + model + "\nProducent:" + producer +"\nCena: " + price);
     }
 }
 
