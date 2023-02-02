@@ -5,7 +5,7 @@ public class Human {
 
     Animal pet;
 
-    Car car;
+    private Car car;
 
     double getSalary()
 
@@ -21,6 +21,22 @@ public class Human {
             System.out.println("Bla bla bla biurokratyczne pierdoły");
             salary += x;
         }
+    }
+
+    Car getCar()
+    {
+        return car;
+    }
+
+    void setCar(Car car){
+        if(salary > car.price)
+            this.car = car;
+        else if(salary > car.price/12) {
+            System.out.println("Kupiłeś auto na kredyt");
+            this.car = car;
+        }
+        else
+                System.out.println("Nie stać Cie na to auto");
     }
 
 }
