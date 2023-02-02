@@ -2,7 +2,7 @@ package devices;
 
 import creatures.Human;
 
-public class Car extends Devices implements  sellable {
+public abstract class Car extends Devices implements  sellable {
 
 
     public Car(String model, String producer, double price) {
@@ -30,6 +30,8 @@ public class Car extends Devices implements  sellable {
         else
             System.out.println("Nie można przeprowadzić tranzakcji");
         }
+
+        abstract void refuel();
     }
 
 

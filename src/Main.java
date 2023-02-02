@@ -2,14 +2,15 @@ import creatures.Animal;
 import creatures.Human;
 import creatures.Pet;
 import devices.Car;
+import devices.Diesel;
 
 public class Main {
     public static void main(String[] args) {
         Pet pet = new Pet("cat");
         Human me = new Human();
         Human sister = new Human();
-        Car wagen = new Car("Camaro" , "Chevrolet" , 20000);
-        Car wagen2 = new Car("Camaro" , "Chevrolet" , 20000);
+        Car wagen = new Diesel("Camaro" , "Chevrolet" , 20000);
+        Car wagen2 = new Diesel("Camaro" , "Chevrolet" , 20000);
 
         for(int i = 0 ; i < 8 ; i++)
         pet.takeAWalk();

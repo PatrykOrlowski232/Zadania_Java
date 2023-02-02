@@ -23,6 +23,13 @@ public class Phone extends Devices implements sellable {
             System.out.println("Nie można przeprowadzić tranzakcji");
     }
 
+    void installAnnApp(String name){}
+
+    void installAnnApp(String name , String version){}
+
+    void installAnnApp(String name , String version , String server_name ){}
+
+    void installAnnApp(String[] name){}
 
 
 }
